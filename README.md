@@ -23,7 +23,7 @@ Server http://localhost:5000/
 
 <tr>
     <td>npm run install</td>
-    <td>command will download the dependency files of client and server.</td>
+    <td>Download the dependency files of client and server.</td>
 </tr>
 
  <tr>
