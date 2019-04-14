@@ -12,6 +12,7 @@ MERN Starter with Redux.
    npm run dev
 
 Client http://localhost:3000/
+
 Server http://localhost:5000/
 
 <table>
