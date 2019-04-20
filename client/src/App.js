@@ -1,30 +1,26 @@
 import React, { Component } from "react";
-import "./App.css";
-import Header from "./components/Header";
 import { Container } from "reactstrap";
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from "react-redux";
 import store from "./store";
 
+import "./App.css";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Page from "./components/Page";
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="app">
+        <BrowserRouter>
           <Header />
           <Container className="mt-3">
-            <div className="App">
-              <ul>
-                <li>MongoDB</li>
-                <li>Express JS</li>
-                <li>React JS</li>
-                <li>Node JS</li>
-
-                <li>Redux</li>
-              </ul>
-            </div>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/page" component={Page} />
+            </Switch>
           </Container>
-        </div>
+        </BrowserRouter>
       </Provider>
     );
   }
